@@ -1,0 +1,49 @@
+# Visual Studio files
+.vs/
+*.suo
+*.user
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
+*.pdb
+*.ilk
+*.cache
+
+# NuGet packages
+packages/
+*.nupkg
+*.nuget.props
+
+# Rider
+.idea/
+*.sln.iml
+
+# Visual Studio Code
+.vscode/
+
+# Resharper
+*.DotSettings
+*.DotSettings.user
+
+# NCrunch
+_NCrunch_*/
+
+# StyleCop
+StyleCop.Cache
+
+# Visual Studio profiler
+*.vsp
+*.vspx
+
+# Test results
+TestResults/
+
+# Log files
+*.log
+
+# User-specific files
+*.userprefs
