@@ -13,8 +13,18 @@ public class LoginPageUpgraded
     private ILocator InputPassword => _page.Locator("#Password");
     private ILocator ButtonLogin => _page.Locator("input" ,new PageLocatorOptions { HasTextString = "Log in" });
     private ILocator LinkEmployeeDetails => _page.Locator("text='Employee Details'");
-    
-    public async Task ClickLogin() => await LinkLogin.ClickAsync();
+
+    public async Task ClickLogin()
+    {
+        await _page.RunAndWaitForNavigationAsync(async () =>
+            {
+                await LinkLogin.ClickAsync();
+            }, 
+            new PageRunAndWaitForNavigationOptions
+            {
+                UrlString = "**/Login"
+            });
+    } 
 
     public async Task Login(string username = "admin", string password = "password")
     {
