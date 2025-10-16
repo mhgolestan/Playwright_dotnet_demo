@@ -47,7 +47,7 @@ public class Tests
         var page = await browser.NewPageAsync();
         await page.GotoAsync("http://eaapp.somee.com/");
         
-        LoginPage loginPage = new LoginPage(page);
+        LoginPageUpgraded loginPage = new LoginPageUpgraded(page);
         await loginPage.ClickLogin();
         await loginPage.Login("admin", "password");
         
